@@ -58,4 +58,4 @@ The application is structured as follows:
 
 # screenShots for Reference
 
-![My Image](../todo-app-ngrx//src//assets/1.png)
+![My Image](src/assets/1.png)
