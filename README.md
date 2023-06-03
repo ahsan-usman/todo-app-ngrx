@@ -56,3 +56,6 @@ The application is structured as follows:
 - The application uses a fake JSON server to provide a RESTful API and data.
 - The server is started using the db.json file as the database. You can modify the db.json file to add, update, or delete data.
 
+# screenShots for Reference
+
+![My Image](../todo-app-ngrx//src//assets/1.png)
