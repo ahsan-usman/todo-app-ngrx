@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Task } from 'src/app/model/todo.model';
 import * as TodoActions from 'src/app/ngrx-todo/todo.actions';
-import { addTask, deleteTask, editTask } from 'src/app/ngrx-todo/todo.actions';
 import { selectTasks } from 'src/app/ngrx-todo/todo.selectors';
-import { CrudService } from 'src/app/service/crud.service';
+import { AddUserComponent } from '../add-user/add-user.component';
 
 @Component({
   selector: 'app-todo',
@@ -19,7 +19,14 @@ export class TodoComponent {
   addTaskValue : string = '';
   editTaskValue : string = '';
 
-  constructor(private store: Store) { }
+  constructor(private store: Store, private dialog: MatDialog) { }
+
+  openAddUserDialog(): void {
+    this.dialog.open(AddUserComponent, {
+      width: '400px',
+      disableClose: true
+    });
+  }
 
   ngOnInit(): void {
     this.editTaskValue = '';

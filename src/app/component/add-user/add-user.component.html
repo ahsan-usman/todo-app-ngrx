@@ -1,0 +1,43 @@
+<h2 class="text-center">Add User</h2>
+<form [formGroup]="addUserForm" (ngSubmit)="submitForm()">
+  <mat-form-field appearance="outline">
+    <mat-label>Name</mat-label>
+    <input matInput formControlName="name" placeholder="Name" required />
+    <mat-error
+      *ngIf="
+        addUserForm.controls['name'].invalid &&
+        addUserForm.controls['name'].touched
+      "
+    >
+      Name is required
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" placeholder="Email" required />
+    <mat-error
+      *ngIf="
+        addUserForm.controls['email'].invalid &&
+        addUserForm.controls['email'].touched
+      "
+    >
+      Email is required
+    </mat-error>
+  </mat-form-field>
+  <br />
+  <div class="text-center">
+    <button
+      class="mx-2"
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="addUserForm.invalid"
+    >
+      Add User
+    </button>
+    <button mat-raised-button class="btn-primary" (click)="closeDialog()">
+      Close Dialog
+    </button>
+  </div>
+</form>

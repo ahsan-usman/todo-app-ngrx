@@ -5,15 +5,15 @@ export const selectTodoState = createFeatureSelector<TodoState>('todo');
 
 export const selectTasks = createSelector(
   selectTodoState,
-  state => state.tasks
+  (state) => state.tasks
 );
 
 export const selectLoading = createSelector(
   selectTodoState,
-  state => state.loading
+  (state) => state.loading
 );
 
 export const selectError = createSelector(
   selectTodoState,
-  state => state.error
+  (state) => state.error
 );

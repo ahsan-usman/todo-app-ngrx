@@ -11,56 +11,56 @@ export interface TodoState {
 const initialState: TodoState = {
   tasks: [],
   loading: false,
-  error: null
+  error: null,
 };
 
 export const todoReducer = createReducer(
   initialState,
-  on(TodoActions.loadTasks, state => ({
+  on(TodoActions.loadTasks, (state) => ({
     ...state,
     loading: true,
-    error: null
+    error: null,
   })),
   on(TodoActions.loadTasksSuccess, (state, { tasks }) => ({
     ...state,
     tasks,
     loading: false,
-    error: null
+    error: null,
   })),
   on(TodoActions.loadTasksFailure, (state, { error }) => ({
     ...state,
     tasks: [],
     loading: false,
-    error
+    error,
   })),
-  on(TodoActions.addTaskSuccess, state => ({
+  on(TodoActions.addTaskSuccess, (state) => ({
     ...state,
     loading: false,
-    error: null
+    error: null,
   })),
   on(TodoActions.addTaskFailure, (state, { error }) => ({
     ...state,
     loading: false,
-    error
+    error,
   })),
-  on(TodoActions.editTaskSuccess, state => ({
+  on(TodoActions.editTaskSuccess, (state) => ({
     ...state,
     loading: false,
-    error: null
+    error: null,
   })),
   on(TodoActions.editTaskFailure, (state, { error }) => ({
     ...state,
     loading: false,
-    error
+    error,
   })),
-  on(TodoActions.deleteTaskSuccess, state => ({
+  on(TodoActions.deleteTaskSuccess, (state) => ({
     ...state,
     loading: false,
-    error: null
+    error: null,
   })),
   on(TodoActions.deleteTaskFailure, (state, { error }) => ({
     ...state,
     loading: false,
-    error
+    error,
   }))
 );

@@ -4,11 +4,10 @@ import { Observable } from 'rxjs';
 import { Task } from '../model/todo.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CrudService {
-
-  private serviceURL: string = "http://localhost:3000/tasks";
+  private serviceURL: string = 'http://localhost:3000/tasks';
 
   constructor(private http: HttpClient) {}
 
@@ -27,5 +26,4 @@ export class CrudService {
   editTask(task: Task): Observable<Task> {
     return this.http.put<Task>(`${this.serviceURL}/${task.id}`, task);
   }
-
 }

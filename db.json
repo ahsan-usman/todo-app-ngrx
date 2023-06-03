@@ -1,8 +1,34 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "ahsan",
+      "email": "ahsanusman002@gmail.com"
+    },
+    {
+      "id": "1685782270131",
+      "name": "ahsan",
+      "email": "ahsanusman002@gmail.com"
+    },
+    {
+      "id": "1685782300627",
+      "name": "Usman",
+      "email": "ahsan12@gmail.com"
+    },
+    {
+      "id": "1685782694118",
+      "name": "khalid",
+      "email": "khalid@gmail.com"
+    }
+  ],
   "tasks": [
     {
       "id": 1,
-      "task_name": "Do work wo"
+      "task_name": "Learn React"
+    },
+    {
+      "task_name": "Learn NGRX",
+      "id": 2
     }
   ]
 }

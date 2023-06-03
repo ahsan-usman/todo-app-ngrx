@@ -1,4 +1,20 @@
+<mat-toolbar class="navbar">
+  <span>ToDo Application</span>
+</mat-toolbar>
+
+
 <div class="container-fluid bg-light">
+  <button type="button" class="btn btn-primary" (click)="openAddUserDialog()">
+    Add User
+  </button>
+  <button
+    type="button"
+    class="btn btn-primary"
+    routerLink="/userList"
+    routerLinkActive="active"
+  >
+    User List
+  </button>
   <div class="container bg-light">
     <div class="row mt-4" style="height: 500px">
       <div class="col"></div>
