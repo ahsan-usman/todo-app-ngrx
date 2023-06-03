@@ -56,6 +56,12 @@ The application is structured as follows:
 - The application uses a fake JSON server to provide a RESTful API and data.
 - The server is started using the db.json file as the database. You can modify the db.json file to add, update, or delete data.
 
-# screenShots for Reference
+# Screen Shots for Reference
 
 ![My Image](src/assets/1.png)
+
+![My Image](src/assets/2.png)
+
+![My Image](src/assets/3.png)
+
+![My Image](src/assets/4.png)
